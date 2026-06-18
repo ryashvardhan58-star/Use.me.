@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashvardhan - Professional Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent; /* Mobile touch highlight remove karne ke liye */
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+
+        span {
+            color: #38bdf8;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: rgba(15, 23, 42, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        nav a {
+            color: #94a3b8;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+
+        nav a:active {
+            color: #38bdf8;
+        }
+
+        .btn-nav {
+            background: #38bdf8;
+            color: #0f172a !important;
+            padding: 6px 15px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: transform 0.1s ease;
+        }
+
+        .btn-nav:active {
+            transform: scale(0.95);
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            background: radial-gradient(circle at top, #1e293b 0%, #0f172a 70%);
+        }
+
+        .hero-content h1 {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 16px;
+            color: #94a3b8;
+            max-width: 500px;
+            margin: 0 auto 30px auto;
+        }
+
+        .hero-buttons a {
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-weight: 600;
+            margin: 5px;
+            display: inline-block;
+            transition: transform 0.1s ease, opacity 0.2s;
+        }
+
+        /* Touch Effects for Buttons */
+        .hero-buttons a:active {
+            transform: scale(0.95);
+        }
+
+        .btn-primary {
+            background-color: #38bdf8;
+            color: #0f172a;
+        }
+
+        .btn-secondary {
+            border: 2px solid #38bdf8;
+            color: #38bdf8;
+        }
+
+        .services {
+            padding: 80px 5%;
+            text-align: center;
+            background-color: #0b0f19;
+        }
+
+        .services h2 {
+            font-size: 30px;
+            margin-bottom: 40px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        /* Touch Effect for Cards */
+        .service-card {
+            background-color: #1e293b;
+            padding: 30px 20px;
+            border-radius: 10px;
+            border: 1px solid #334155;
+            transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s;
+        }
+
+        .service-card:active {
+            transform: scale(0.98);
+            border-color: #38bdf8;
+            background-color: #1e293b;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #94a3b8;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        footer {
+            padding: 60px 5% 20px 5%;
+            text-align: center;
+            background-color: #0f172a;
+            border-top: 1px solid #1e293b;
+        }
+
+        footer h2 {
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+            font-size: 16px;
+            color: #f8fafc;
+            line-height: 2;
+        }
+
+        .contact-info a {
+            color: #38bdf8;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.1s ease;
+        }
+
+        .contact-info a:active {
+            transform: scale(0.95);
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            border-top: 1px solid #1e293b;
+            padding-top: 20px;
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                display: none;
+            }
+            .hero-content h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Yash<span>vardhan</span></div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">Education</a>
+            <a href="#contact" class="btn-nav">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome To My <br><span>Professional Portfolio</span></h1>
+            <p>Hi, I am Yashvardhan. I build clean, fast, and modern digital experiences. Explore my profile and get in touch for collaborations.</p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn-primary">My Education</a>
+                <a href="#contact" class="btn-secondary">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="services">
+        <h2>Education & Expertise</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Basic Computer Diploma</h3>
+                <p>Gained fundamental knowledge of computer operations, software handling, and digital workflows.</p>
+            </div>
+            <div class="service-card">
+                <h3>Web Technology</h3>
+                <p>Learning and implementing modern front-end web designs with standard responsive codes.</p>
+            </div>
+            <div class="service-card">
+                <h3>Digital Solutions</h3>
+                <p>Providing clean layout designs optimized for mobile phones and modern browsers.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Let's Connect</h2>
+        <p>Feel free to reach out to me for any projects or inquiries.</p>
+        
+        <div class="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:ryashvardhan58@gmail.com">ryashvardhan58@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:8492887585">+91 8492887585</a></p>
+        </div>
+
+        <a href="mailto:ryashvardhan58@gmail.com" class="btn-primary" style="text-decoration: none;">Send Email Directly</a>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Yashvardhan. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
